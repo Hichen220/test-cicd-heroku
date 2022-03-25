@@ -15,7 +15,7 @@ app.use(MoviesController);
 app.use(ActorsController);
 app.use(UserRouter);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log("welcome to ", process.env.APP_NAME);
   console.log("server listening on port " + port);
 });
